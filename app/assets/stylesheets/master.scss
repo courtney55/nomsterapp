@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture');
 @import "bootstrap";
 
 .booyah-box {
@@ -27,3 +28,14 @@ body {
   background: image_url('darkness.png');
   box-shadow: 5px 10px #888888;
 }
+
+.navbar-inverse .navbar-brand {
+  color: #0E82E7;
+  font-family: 'Black And White Picture', sans-serif;
+  font-size:27px;
+}
+
+
+
+
+
