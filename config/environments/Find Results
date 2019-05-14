@@ -1,0 +1,54 @@
+Searching 1117 files for "user_id"
+
+/Users/courtneyfink/Desktop/coding-environment/src/sana/db/schema.rb:
+   19      t.text "message"
+   20      t.string "rating"
+   21:     t.integer "user_id"
+   22      t.integer "place_id"
+   23      t.datetime "created_at", null: false
+   24      t.datetime "updated_at", null: false
+   25      t.index ["place_id"], name: "index_comments_on_place_id"
+   26:     t.index ["user_id", "place_id"], name: "index_comments_on_user_id_and_place_id"
+   27    end
+   28  
+   ..
+   41      t.datetime "created_at", null: false
+   42      t.datetime "updated_at", null: false
+   43:     t.integer "user_id"
+   44      t.float "latitude"
+   45      t.float "longitude"
+   46:     t.index ["user_id"], name: "index_places_on_user_id"
+   47    end
+   48  
+
+/Users/courtneyfink/Desktop/coding-environment/src/sana/db/migrate/20190506203736_alter_places_add_user_id_column.rb:
+    1  class AlterPlacesAddUserIdColumn < ActiveRecord::Migration[5.2]
+    2    def change
+    3:     add_column :places, :user_id, :integer
+    4:     add_index :places, :user_id 
+    5    end
+    6  end
+
+/Users/courtneyfink/Desktop/coding-environment/src/sana/db/migrate/20190508202207_create_comments.rb:
+    4        t.text :message
+    5        t.string :rating
+    6:       t.integer :user_id
+    7        t.integer :place_id
+    8        t.timestamps
+    9      end
+   10  
+   11:     add_index :comments, [:user_id, :place_id]
+   12      add_index :comments, :place_id
+   13    end
+
+/Users/courtneyfink/Desktop/coding-environment/src/sana/db/migrate/20190509185240_create_photos.rb:
+    9      end
+   10  
+   11:     add_index :photos, [:place_id]
+   12      add_index :photos, :place_id
+   13    end
+
+/Users/courtneyfink/Desktop/coding-environment/src/sana/log/development.log:
+    <binary>
+
+41 matches across 5 files
