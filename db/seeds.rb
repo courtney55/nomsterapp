@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Photo.create!([{
+  place_id: 1,
+  caption: "Peyton Reed",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Peyton_Reed_%28cropped%29.jpg/220px-Peyton_Reed_%28cropped%29.jpg",
+  user: 69814420102300
+},
+{
+  place_id: 2,
+  caption: "Rudd",
+  image: "https://m.media-amazon.com/images/M/MV5BMTY4NTEwNDg1MV5BMl5BanBnXkFtZTgwODMwMDA0ODE@._V1_.jpg",
+  user: 69814420102300
+}])

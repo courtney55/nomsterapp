@@ -1,5 +1,11 @@
 <h1>New Photo</h1>
 
-<%= render 'form', photo: @photo %>
+<%= simple_form_for @photo do |f| %>
 
-<%= link_to 'Back', photos_path %>
+  <%= f.input :image %>
+  <%= f.input :caption %>
+  <% f.input :photo_id %>
+
+  <%= f.button :submit %>
+
+<% end %>

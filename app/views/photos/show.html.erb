@@ -1,19 +1,5 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag @photo.image.medium %>
 
-<p>
-  <strong>Place:</strong>
-  <%= @photo.place_id %>
-</p>
+<h1><%= @photo.caption %></h1>
 
-<p>
-  <strong>Caption:</strong>
-  <%= @photo.caption %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @image_tag @photo.image.thumb.url %>
-</p>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<p><%= @photo.photo_id %></p>

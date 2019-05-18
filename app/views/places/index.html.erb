@@ -56,7 +56,6 @@
         </blockquote>
       </div>
     <% end %>
-
     <% if place.photos.present? %>
       <div class="col-6">
         <% if place.photo.last.present? %>
@@ -67,5 +66,5 @@
     <% end %>
   </div>
 <% end %>
-
+<br /><br /><br />
 <%= will_paginate @places %>
