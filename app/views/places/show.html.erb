@@ -11,7 +11,7 @@
         var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 14,
           center: myLatLng
         });
 
@@ -22,7 +22,6 @@
         });
       }
     </script>
-
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvrZKNetxiMQEydU7J5X74WXRmc-P9avw&callback=initMap">
     </script>
@@ -61,7 +60,7 @@
       </div>
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
           <div class="modal-body">
-            <%= f.input :image %>
+            <%= f.input :picture %>
             <%= f.input :caption %>
           </div>
           <div class="modal-footer">
@@ -73,15 +72,16 @@
   </div>
 </div>
 
+<% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url %>
+  <%= photo.caption %>
+<% end %>
+
 <div class="row">
   <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6">
-      <photo>
-        <% if photo.image.present? %>
-          <%= photo.image %>
-        <% end %>
-        <%= photo.caption %>
-      </photo>
+      <%= image_tag photo.picture.url %>
+      <%= photo.caption %>
     </div>
   <% end %>
 </div>

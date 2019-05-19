@@ -10,7 +10,7 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> 
  
   <div class="field">
     <%= f.label :place_id %><br>
@@ -21,17 +21,17 @@
     <%= f.text_area :caption %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-    <%= if f.object.image? %>
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+    <%= if f.object.picture? %>
       <%= image_tag f.object.image.thumb.url %>
-      <%= f.label :remove_image %>
-      <%= f.check_box :remove_image %>
+      <%= f.label :remove_picture %>
+      <%= f.check_box :remove_picture %>
     <% end %>
   </div>
   
   <div class="actions">
-    <%= f.input :image %>
+    <%= f.input :picture %>
   </div>
 <% end %>
 

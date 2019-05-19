@@ -1,11 +1,11 @@
 <div class="booyah-box">
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <%= image_tag 'user.png' %>
     </div>
 
-    <div class="col-8">
-      <h1>Logged in as: <%= @user.email %></h1>
+    <div class="col-9">
+      <h1>Logged in: <%= @user.email %></h1>
       <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
       <h4><%= @user.comments.count %> total comments</h4>
       <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>

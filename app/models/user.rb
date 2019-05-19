@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  mount_uploader :image
+  mount_uploader :photos
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -7,5 +7,5 @@ class User < ApplicationRecord
 
   has_many :places
   has_many :comments
-  has_many :photos
+  has_many_attached :photos
 end

@@ -3,6 +3,7 @@
 <%= simple_form_for @photo do |f| %>
 
   <%= f.input :image %>
+  <%= f.file_field :photos %>
   <%= f.input :caption %>
   <% f.input :photo_id %>
 
