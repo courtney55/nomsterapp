@@ -59,7 +59,7 @@
     <% if place.pictures.present? %>
       <div class="col-6">
         <% if place.pictures.last.present? %>
-          <b><%= place.pictures.last %></b> -
+          <b><%= place.pictures.last.photo %></b> -
         <% end %>
         <%= place.pictures.last.caption %>
       </div>
