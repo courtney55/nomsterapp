@@ -75,10 +75,8 @@
 <div class="row">
   <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6">
-      <blockquote>
-        <%= image_tag photo.image.url, class:"img-fluid" %>
         <%= photo.caption %>
-      </blockquote>
+        <%= image_tag photo.picture.url %>
     </div>
   <% end %>
 </div>
@@ -135,6 +133,9 @@
     </div>
   <% end %>
 </div>
+
+
+<%#Photo.create :place_id => 1000, :caption => "Chicago kingston mines", :user_id => 999, :created_at => "1/2/19", :updated_at=>"1:34", :picture =>"111", :id=> 12345%>
 
 
 

@@ -56,10 +56,11 @@
         </blockquote>
       </div>
     <% end %>
-    <% if place.photos.present? %> 
+
+    <% if place.photos.present? %>  
       <div class="col-6">
         <% if place.photos.last.present? %>
-          <b><%= place.photos.last %></b> -
+          <b><%= place.photos.last %></b> 
         <% end %>
         <%= place.photos.last.caption %>
       </div>

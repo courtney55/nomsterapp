@@ -75,8 +75,6 @@ gem 'devise'
 gem 'geocoder'
 gem 'figaro'
 gem 'carrierwave', '~> 1.0'
-gem 'mini_magick', '~> 4.9', '>= 4.9.3'
-
 
 
 
